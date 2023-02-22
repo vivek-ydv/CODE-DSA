@@ -1,2 +1,2 @@
 # DSA-CPP
- A repository for topicwise interview dsa problems.
+A repository For DSA Interview Problems.
