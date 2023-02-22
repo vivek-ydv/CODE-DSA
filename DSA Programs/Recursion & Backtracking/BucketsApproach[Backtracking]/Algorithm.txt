@@ -1,0 +1,28 @@
+Intuition:
+
+->Like classic backtracking algorithms, we will try different combinations of sum
+  but this time instead of one combination sum we need "k" combination sums.
+->Let's say, we will use k buckets to have different combination-sums using the numbers from our input array.
+  During recursion, everytime we would have used all our numbers from input array to populate our buckets, we will note down the value of our "max-filled" bucket.
+->In the end we will chose the minimum of those max values as our result.
+
+Algorithm:
+
+          -> Sort the input array (Ascending or descending : According to problem)
+          -> Invoke the backtracking function with an index(first or last) for your input array
+          -> Set the base condition for the recursive backtracking function as,
+            either when the index is less than zero or when the index is greater than the entire length of your input array,choose one!
+          -> Within the recursive function, populate the buckets(say, an empty array).
+          -> To speed up, Prune! What do I mean? I mean, Insert the logic for avoiding unnecesary depth/stacks of recursive tree,
+             when you know that a specific step is not going to lead to your answer. 
+          -> For this question(Min_Time_To_Finish_All_Jobs), if any step is not leading us to "minimum"..i.e,
+             if addition of any number in the bucket is making the max go above the previous min value, let's just discard it right away.
+
+
+********************************************************* SORTING THE INPUT *********************************************************
+-> We are sorting the data so that to trigger more pruning,which will make code efficient.
+-> How to decide in which order we have to sort :
+                                                 -> In most of the cases we have to sort in decresing order,
+                                                    where we are searching for minimum or we have some fixed value to which we can't exceed.
+                                                 -> When we sort the data in decresing order then bigger values will comes which probably will
+                                                    exceed target,hence recursive call will not go deeper for that case(pruning).
