@@ -26,6 +26,7 @@ void revDFS(int node, vector<int> &vis, vector<int> transpose[])
         }
     }
 }
+
 int main()
 {
     int n = 7;

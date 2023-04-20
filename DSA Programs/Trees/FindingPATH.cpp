@@ -13,9 +13,10 @@ bool traverse(TreeNode *root, int target, string &path)
 {
     if (root == NULL)
         return false;
+
     if (root->val == target)
         return true;
-
+    
     path.push_back('L');
     bool left = traverse(root->left, target, path);
     if (left)
@@ -35,6 +36,5 @@ bool traverse(TreeNode *root, int target, string &path)
 }
 int main()
 {
-
     return 0;
 }

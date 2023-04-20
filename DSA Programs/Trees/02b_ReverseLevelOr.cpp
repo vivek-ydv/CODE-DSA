@@ -39,8 +39,8 @@ void RevLevelOrder(node *root)
     queue<node *> q;
     q.push(root); // Push the root into the queue
     q.push(NULL); // Pushing the seprator
-
     stack<node *> st;
+
     while (!q.empty())
     {
         node *current = q.front();
