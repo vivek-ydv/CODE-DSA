@@ -22,12 +22,13 @@ class Derived : public Base1, public Base2
 public:
     void greet()
     {
-        Base2 ::greet();
+        Base2 ::greet(); // this will resolve the ambigutiy
     }
 };
 int main()
 {
     Derived der;
+    der.Base2 :: 
     der.greet();
     return 0;
 }
