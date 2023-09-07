@@ -38,6 +38,7 @@ int main()
     Base_class_pointer->var_base = 27;
     Base_class_pointer->display();
 
+    // Just to demonstrate 
     derived_class_pointer = &obj_derived;
     derived_class_pointer->var_base = 23;
     derived_class_pointer->var_derived = 19;
